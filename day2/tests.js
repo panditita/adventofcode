@@ -9,15 +9,15 @@ function assert(outcome, description) {
   return outcome;
 }
 
-const day1Part1 = score.calculateGameScore(constants.INPUT);
-const day1Part2 = score.calculateDecodedScore(constants.INPUT);
+const day2Part1 = score.calculateGameScore(constants.INPUT);
+const day2Part2 = score.calculateDecodedScore(constants.INPUT);
 
 assert(
-  day1Part1 === 10941,
+  day2Part1 === 10941,
   "calculateScore should return 10941"
 );
 
 assert(
-  day1Part2 === 13071,
+  day2Part2 === 13071,
   "calculateScore should return 13071"
 );
