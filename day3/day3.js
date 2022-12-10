@@ -1,5 +1,9 @@
 import constants from "./input.js";
 
+let sum = (input) => {
+  return input.reduce((accumulator, current) => accumulator + current);
+};
+
 let separateIntoIndividualRucksacks = (input) => {
   return input
     .trim()
@@ -26,7 +30,7 @@ let divideTheTwoCompartments = (input) => {
     );
   });
 
-  return priorities.reduce((accumulator, current) => accumulator + current);
+  return sum(priorities);
 };
 
 let findRepeatingCharactersWithPriorities = (one, two, three) => {
@@ -131,9 +135,8 @@ let missingSecurityBadges = (input) => {
     );
   }
 
-  return priorities.reduce((accumulator, current) => accumulator + current);
+  return sum(priorities);
 };
-
 
 export default {
   divideTheTwoCompartments,
