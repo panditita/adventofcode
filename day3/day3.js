@@ -4,17 +4,17 @@ let sum = (input) => {
   return input.reduce((accumulator, current) => accumulator + current);
 };
 
-let separateIntoIndividualRucksacks = (input) => {
+const separateIntoIndividualRucksacks = (input) => {
   return input
     .trim()
-    .split("\n")
+    .split("\n\n")
     .map((rucksacks) => {
       return rucksacks.split(" ").toString();
     });
 };
 
 let divideTheTwoCompartments = (input) => {
-  let rucksacks = separateIntoIndividualRucksacks(input);
+  const rucksacks = separateIntoIndividualRucksacks(input);
   let priorities = [];
 
   rucksacks.forEach((rucksack) => {
@@ -115,7 +115,7 @@ let findRepeatingCharactersWithPriorities = (one, two, three) => {
 // part 2
 
 let missingSecurityBadges = (input) => {
-  let rucksacks = separateIntoIndividualRucksacks(input);
+  const rucksacks = separateIntoIndividualRucksacks(input);
   let setsOfThrees = [];
   for (let i = 0; i <= rucksacks.length; i += 3) {
     if (i % 3 == 0 && rucksacks[i]) {
